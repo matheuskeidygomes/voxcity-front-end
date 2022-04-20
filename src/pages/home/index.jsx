@@ -26,11 +26,10 @@ export default function Home() {
       let hasUser = await res.json();
 
       setUser(hasUser);
+      setLoading(false);
     }
 
     getUser();
-
-    setLoading(false);
 
   }, [])
 
