@@ -1,1 +1,1 @@
-export const api = "http://vox-city-api.herokuapp.com";
+export const api = process.env.REACT_APP_API;
