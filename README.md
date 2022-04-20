@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Voxcity Login
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Plataforma de registro e login, com formulário multi-etapas para armazenamento de dados do usuário no banco de dados.
 
-## Available Scripts
+![Node](https://img.shields.io/badge/Node-v16.14%20(LTS)-brightgreen)
+![Npm](https://img.shields.io/badge/Npm-v8.3.1-blue) 
+![License](https://img.shields.io/badge/License-MIT-red)
 
-In the project directory, you can run:
+<h2 align="center">
+ <a href="#Status">Status</a> •
+ <a href="#Features">Features</a> •
+ <a href="#Repositório-Online">Repositório Online</a> • 
+ <a href="#Screenshots">Screenshots</a> • 
+ <a href="#Pré-requisitos">Pré-requisitos</a> • 
+ <a href="#Rodando-a-aplicação">Rodando a aplicação</a> • 
+ <a href="#Tecnologias">Tecnologias</a> • 
+ <a href="#Autor">Autor </a>
+</h2>
 
-### `npm start`
+# Status
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+:heavy_check_mark: Finalizado
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Features
 
-### `npm test`
+- [x] Cadastrar usuário no banco de dados
+- [x] Realizar login com conta cadastrada
+- [x] Verificar informações de usuário na página inicial
+- [x] Gerar sequência alfanumérica única a cada visualização dos dados de usuário
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Repositório Online
 
-### `npm run build`
+Acesse clicando no botão abaixo:   
+  
+<a href="https://sony-playstation.herokuapp.com/"> 
+    <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white"/> 
+</a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Screenshots
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Pré-requisitos
 
-### `npm run eject`
+Será necessário ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). Também é 
+aconselhável ter um editor para trabalhar com o código, como o [VSCode](https://code.visualstudio.com/).
+Esta aplicação necessita consultar a api do back-end, que se encontra na nuvem. Caso deseje rodar 
+a api do backend em sua máquina local, acesse o repositório [Voxcity-API](https://github.com/matheuskeidygomes/voxcity-back-end-api), e siga as instruções detalhadas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Versão Node utilizada nesta aplicação: v16.14 (LTS)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Rodando a aplicação
 
-## Learn More
+```bash
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Clone este repositório
+$ git clone <https://github.com/matheuskeidygomes/voxcity-front-end.git>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Acesse a pasta do projeto no terminal/cmd
+$ cd voxcity-front-end
 
-### Code Splitting
+# Instale as dependências
+$ npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Execute a aplicação 
+$ npm start
 
-### Analyzing the Bundle Size
+# O servidor iniciará na porta:3000 - acesse <http://localhost:3000>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+# Tecnologias 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![ReactJS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-### Advanced Configuration
+# Autor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Desenvolvido por <a href="https://github.com/matheuskeidygomes"> Matheus Keidy </a>. Entre em contato!  
+  
+[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheus-keidy-7b9886190/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:matheuskeidygomes@gmail.com)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

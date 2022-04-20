@@ -1,0 +1,61 @@
+.login-button {
+    width: 100%;
+    background: linear-gradient(90deg, #283c86 0%, #45a247);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 7px;
+    border:none;
+    color:white;
+    transition: all 0.1s linear;
+}
+
+.login-button:hover {
+    transform: scale(103%);
+}
+
+.login-label {
+    display: flex;
+    align-items: center;
+} 
+
+.login-input {
+    flex:1;
+    margin: 10px 0px 10px 0px;
+    height: 40px;
+    padding: 8px;
+    background-color:transparent;
+    border:none;
+    border-bottom: 1px solid rgb(112, 112, 112);
+    outline: none;
+    color:white;
+}
+
+.login-icon {
+    background-color: transparent;
+    border:none;
+    color:   rgb(112, 112, 112);
+}
+
+
+.login-small {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.login-small a {
+    text-decoration: none;
+    color:#45a247;
+}
+
+.login-small a:hover {
+    color: #45a247;
+}
+
+@media only screen and (max-width:400px) {
+    #login-icon {
+        display: none;
+    }
+
+
+    
+}

@@ -1,0 +1,14 @@
+.footer {
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+background: rgba(255, 255, 255, 0.05);
+} 
+
+.footer-title {
+    color:white;
+    padding: 25px;
+    font-weight: 300;
+    text-align: center;
+}
