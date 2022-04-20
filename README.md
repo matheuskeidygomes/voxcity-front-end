@@ -27,7 +27,7 @@ Plataforma de registro e login, com formulário multi-etapas para armazenamento 
 - [x] Cadastrar usuário no banco de dados
 - [x] Realizar login com conta cadastrada
 - [x] Verificar informações de usuário na página inicial
-- [x] Gerar sequência alfanumérica única a cada visualização dos dados de usuário
+- [x] Gerar sequência alfanumérica única a cada requisição na página inicial
 
 # Repositório Online
 
@@ -85,6 +85,7 @@ $ npm start
 ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![ReactRouter](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
 
 # Autor
 
