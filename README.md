@@ -21,6 +21,7 @@ Plataforma de registro e login, com formulário multi-etapas para armazenamento 
 
 :heavy_check_mark: Finalizado
 
+
 # Features
 
 - [x] Cadastrar usuário no banco de dados
@@ -38,6 +39,10 @@ Acesse clicando no botão abaixo:
 
 # Screenshots
 
+![Captura de tela de 2022-04-20 15-51-59](https://user-images.githubusercontent.com/74063350/164316256-d1da874a-fae8-488b-9ed7-202d8b6a07ce.png)
+![Captura de tela de 2022-04-20 15-52-19](https://user-images.githubusercontent.com/74063350/164316371-dc97859e-96ae-4d26-a13e-06b0bf1dc746.png)
+![Captura de tela de 2022-04-20 15-54-00](https://user-images.githubusercontent.com/74063350/164316427-63750ddf-f8e9-416d-b0df-99cba0b1133b.png)
+![Captura de tela de 2022-04-20 15-54-12](https://user-images.githubusercontent.com/74063350/164316451-dd638f0d-e95b-448e-afd0-64753444a609.png)
 
 # Pré-requisitos
 
