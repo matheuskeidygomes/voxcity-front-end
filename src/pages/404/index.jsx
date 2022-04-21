@@ -10,7 +10,7 @@ export default function PageNotFound() {
 
             <img className="not-found-icon" src={NotFoundIcon} alt="notfound"/>
 
-            <h2 className="not-found-title"> Página não encontrada! </h2>
+            <h3 className="not-found-title"> Página não encontrada! </h3>
 
         </div>
 

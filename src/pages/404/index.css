@@ -8,8 +8,9 @@
 .not-found-title {
     color:white;
     font-weight: 300;
+    margin-top:20px;
 }
 
 .not-found-icon {
-    width: 200px;
+    width: 100px;
 }
