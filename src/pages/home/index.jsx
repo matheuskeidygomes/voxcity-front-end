@@ -43,11 +43,11 @@ export default function Home() {
 
       <div class="user-container">
 
-        <h2> Seja bem vindo, {user.name}! </h2>
+        <h2> Seja bem vindo! </h2>
 
-        <span className="user-title"> Estes são seus dados:</span>
-
+        <span className="user-title">Nome Completo:</span> <small className="user-info">{user.name}</small>
         <span className="user-title">E-mail:</span> <small className="user-info">{user.email}</small>
+        <span className="user-title">Telefone:</span> <small className="user-info">{user.phone}</small>
         <span className="user-title">Nível:</span> <small className="user-info">{user.experience}</small>
         <span className="user-title">Id Alfanumérico:</span> <small className="user-info">{user.alphanumeric}</small>
 

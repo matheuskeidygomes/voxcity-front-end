@@ -22,7 +22,8 @@ export default function StepFourth() {
     name: useSelector(state => state.UserInfoReducer.name),
     email: useSelector(state => state.UserInfoReducer.email),
     password,
-    experience: useSelector(state => state.UserInfoReducer.experience)
+    experience: useSelector(state => state.UserInfoReducer.experience),
+    phone: useSelector(state => state.UserInfoReducer.phone)
   }
 
   async function AddUser(e) {
