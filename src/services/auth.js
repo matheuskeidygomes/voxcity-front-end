@@ -7,6 +7,7 @@ export function DoLogin(json) {
     Cookies.set('name', json.name, { expires: 1 });
     Cookies.set('email', json.email, { expires: 1 });
     Cookies.set('experience', json.experience, { expires: 1 });
+    Cookies.set('phone', json.phone, { expires: 1 });
 
 }
 
@@ -17,6 +18,7 @@ export function DoLogout() {
     Cookies.remove('name');
     Cookies.remove('email');
     Cookies.remove('experience');
+    Cookies.remove('phone');
 }
 
 export function isLogged() {
