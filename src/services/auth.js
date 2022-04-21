@@ -2,11 +2,11 @@ import Cookies from 'js-cookie';
 
 export function DoLogin(json) {
 
-    Cookies.set('token', json.token, { expires: 999 });
-    Cookies.set('id', json.id);
-    Cookies.set('name', json.name);
-    Cookies.set('email', json.email);
-    Cookies.set('experience', json.experience);
+    Cookies.set('token', json.token, { expires: 1 });
+    Cookies.set('id', json.id, { expires: 1 });
+    Cookies.set('name', json.name, { expires: 1 });
+    Cookies.set('email', json.email, { expires: 1 });
+    Cookies.set('experience', json.experience, { expires: 1 });
 
 }
 

@@ -11,6 +11,7 @@ import { isLogged } from "./services/auth";
 import MenuHeader from "./components/menuHeader";
 import GradientContainer from "./components/gradientContainer";
 import Footer from "./components/footer";
+import PageNotFound from "./pages/404";
 
 export default function App() {
 
@@ -42,6 +43,7 @@ export default function App() {
             <Route path="register/2" element={<HiddenLoggedRoute> <StepTwo /> </HiddenLoggedRoute>} />
             <Route path="register/3" element={<HiddenLoggedRoute> <StepThree /> </HiddenLoggedRoute>} />
             <Route path="register/4" element={<HiddenLoggedRoute> <StepFourth /> </HiddenLoggedRoute>} />
+            <Route path="*" element={<PageNotFound/>} />
 
           </Routes>
 
