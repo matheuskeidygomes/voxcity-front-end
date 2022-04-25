@@ -1,3 +1,7 @@
+.logo-link {
+    text-decoration: none;
+}
+
 .menu-logo {
     display: flex;
     align-items: center;

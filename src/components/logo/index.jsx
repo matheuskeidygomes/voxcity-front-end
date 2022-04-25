@@ -1,17 +1,22 @@
 import React from "react";
 import Logomarca from '../../assets/logo.png';
 import './index.css';
+import { Link } from "react-router-dom";
 
 export default function Logo() {
 
     return <>
 
-        <div className="menu-logo">
+        <Link className={"logo-link"} to="/">
 
-            <img src={Logomarca} alt="logo" />
-            <h1>Voxcity</h1>
+            <div className="menu-logo">
 
-        </div>
+                <img src={Logomarca} alt="logo" />
+                <h1>Voxcity</h1>
+
+            </div>
+
+        </Link>
 
     </>
 
