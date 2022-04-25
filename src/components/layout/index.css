@@ -1,10 +1,23 @@
 .layout {
     display: flex;
-    min-height: 100vh;
+    min-height: 70vh;
     padding: 15px;
     justify-content: center;
     align-items: center;
     width: 100%;
     flex-direction: column;
+}
 
+@media only screen and (min-width:400px){
+
+    .layout {
+        padding: 30px;
+    }
+}
+
+@media only screen and (min-width:500px){
+
+    .layout {
+        padding: 40px;
+    }
 }
