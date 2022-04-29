@@ -1,5 +1,5 @@
-import React, {createContext ,useState} from 'react'
-import { useNavigate,useEffect } from 'react-router-dom';
+import React, {createContext,useEffect ,useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 const UserContext = createContext()
 
 function UserProvider  ({children})  {
@@ -29,7 +29,7 @@ function UserProvider  ({children})  {
         //SE AUTENTICAR FAZ LOIGN
 
         //SE NÃO NAVEGA PRA MAIN
-        
+
     },/* compoenent callback */);
     
     return (
