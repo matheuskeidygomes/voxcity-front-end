@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import FormArea from "../../components/formArea";
 import Header from "../../components/header";
 import Content from "../../components/content";
@@ -9,9 +9,10 @@ import { Person, Key, Alert } from "../../assets";
 import { DoLogin } from "../../services/auth";
 import { api } from "../../services/api";
 import Load from '../../assets/loadingform.gif';
-
+import { UserContext } from "../../UserProvider";
 export default function Login() {
 
+  const context = useContext(UserContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -20,7 +21,7 @@ export default function Login() {
   async function Login(e) {
 
     e.preventDefault();
-
+    let result = {error:false,auth:false,user:{}}
     setLoading(true);
 
     if (email !== "" && password !== "") {
@@ -44,20 +45,26 @@ export default function Login() {
 
         setError(json.error);
 
-      } else {
+        result.error=true
 
+      } else {
         DoLogin(json);
 
-        window.location.href = '/';
+        
+        result.auth = true
+        result.user =json
       }
 
     } else {
 
       setLoading(false);
 
+      result.auth = false
+
       setError("Por favor, preencha os campos necessários!");
     }
 
+    return result
   }
 
 
@@ -71,7 +78,7 @@ export default function Login() {
 
         <FormContent>
 
-          <form onSubmit={(e) => Login(e)}>
+          <form onSubmit={(e) => context.logIn(Login(e))}>
 
             {error &&
 
