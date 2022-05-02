@@ -11,35 +11,39 @@ import PageNotFound from "./pages/404";
 import { useNavigate } from 'react-router-dom';
 import { api } from './services/api.js';
 
-function Routers() {
+export default function Routers() {
 
   const logged = isLogged();
   const navigate = useNavigate();
 
-function PrivateRoute(props) {
-  return logged ? props.children : <Navigate to="/login" />
+  useEffect(() => {
+
+    
+
+  }, [])
+
+  function PrivateRoute(props) {
+    return logged ? props.children : <Navigate to="/login" />
+  }
+
+  function HiddenLoggedRoute(props) {
+    return logged ? <Navigate to="/" /> : props.children;
+  }
+
+  return (
+
+    <Routes>
+
+      <Route path="/" element={<PrivateRoute> <Home /> </PrivateRoute>} />
+      <Route path="/login" element={<HiddenLoggedRoute> <Login /> </HiddenLoggedRoute>} />
+      <Route path="register/" element={<HiddenLoggedRoute> <StepOne /> </HiddenLoggedRoute>} />
+      <Route path="register/2" element={<HiddenLoggedRoute> <StepTwo /> </HiddenLoggedRoute>} />
+      <Route path="register/3" element={<HiddenLoggedRoute> <StepThree /> </HiddenLoggedRoute>} />
+      <Route path="register/4" element={<HiddenLoggedRoute> <StepFourth /> </HiddenLoggedRoute>} />
+      <Route path="*" element={<PageNotFound />} />
+
+    </Routes>
+
+  );
+
 }
-
-function HiddenLoggedRoute(props) {
-  return logged ? <Navigate to="/" /> : props.children;
-}
-
-return (
-
-  <Routes>
-
-    <Route path="/" element={<PrivateRoute> <Home /> </PrivateRoute>} />
-    <Route path="/login" element={<HiddenLoggedRoute> <Login /> </HiddenLoggedRoute>} />
-    <Route path="register/" element={<HiddenLoggedRoute> <StepOne /> </HiddenLoggedRoute>} />
-    <Route path="register/2" element={<HiddenLoggedRoute> <StepTwo /> </HiddenLoggedRoute>} />
-    <Route path="register/3" element={<HiddenLoggedRoute> <StepThree /> </HiddenLoggedRoute>} />
-    <Route path="register/4" element={<HiddenLoggedRoute> <StepFourth /> </HiddenLoggedRoute>} />
-    <Route path="*" element={<PageNotFound />} />
-
-  </Routes>
-
-);
-
-}
-
-export default Routers;
