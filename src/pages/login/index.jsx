@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import FormArea from "../../components/formArea";
 import Header from "../../components/header";
 import Content from "../../components/content";
@@ -9,11 +9,10 @@ import { Person, Key, Alert } from "../../assets";
 import { DoLogin } from "../../services/auth";
 import { api } from "../../services/api";
 import Load from '../../assets/loadingform.gif';
-import { UserContext } from "../../UserProvider";
+
 export default function Login() {
 
   const navigate = useNavigate();
-  const context = useContext(UserContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -48,7 +47,7 @@ export default function Login() {
 
         DoLogin(json);
         navigate("/");
-        
+      
       }
 
     } else {

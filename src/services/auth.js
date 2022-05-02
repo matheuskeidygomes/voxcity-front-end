@@ -29,17 +29,3 @@ export function isLogged() {
     }
 }
 
-export function refreshTokenIsValid() {
-
-    if (isLogged() === false) {
-
-        if (Cookies.get('refreshToken')) {
-
-            return { status: true, refreshToken: Cookies.get('refreshToken') };
-
-        } else {
-
-            return { status: false };
-        }
-    }
-}

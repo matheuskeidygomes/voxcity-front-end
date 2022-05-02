@@ -57,8 +57,7 @@ export default function StepFourth() {
         } else {
 
           DoLogin(json);
-
-          window.location.href = '/';
+          navigate("/");
         }
 
       } else {
