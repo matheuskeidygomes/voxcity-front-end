@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from '../../../contexts/context';
 import FormArea from "../../../components/formArea";
 import Header from "../../../components/header";
 import Content from "../../../components/content";
 import SideBar from "../../../components/sidebar";
 import FormContent from "../../../components/formContent";
-import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Alert } from '../../../assets/index';
 
 export default function StepThree() {
 
-  const dispatch = useDispatch();
+  const { dispatch } = useContext(Context);
   const navigate = useNavigate();
 
   const [email, setEmail] = useState('');

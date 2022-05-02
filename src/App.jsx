@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter} from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Layout from "./components/layout";
 import MenuHeader from "./components/menuHeader";
 import GradientContainer from "./components/gradientContainer";
 import Footer from "./components/footer";
-import Rout from "./Rout";
+import Routers from "./Routers";
+
 export default function App() {
 
   return <>
@@ -16,12 +17,12 @@ export default function App() {
         <MenuHeader />
 
         <Layout>
-          
-          <Rout/>
-        
+
+          <Routers />
+
         </Layout>
 
-        <Footer/>
+        <Footer />
 
       </GradientContainer>
 

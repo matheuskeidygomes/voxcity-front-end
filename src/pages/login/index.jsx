@@ -4,7 +4,7 @@ import Header from "../../components/header";
 import Content from "../../components/content";
 import FormContent from "../../components/formContent";
 import './index.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Person, Key, Alert } from "../../assets";
 import { DoLogin } from "../../services/auth";
 import { api } from "../../services/api";
@@ -12,6 +12,7 @@ import Load from '../../assets/loadingform.gif';
 import { UserContext } from "../../UserProvider";
 export default function Login() {
 
+  const navigate = useNavigate();
   const context = useContext(UserContext)
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -21,7 +22,6 @@ export default function Login() {
   async function Login(e) {
 
     e.preventDefault();
-    let result = {error:false,auth:false,user:{}}
     setLoading(true);
 
     if (email !== "" && password !== "") {
@@ -42,29 +42,21 @@ export default function Login() {
       if (json.error) {
 
         setLoading(false);
-
         setError(json.error);
 
-        result.error=true
-
       } else {
-        DoLogin(json);
 
+        DoLogin(json);
+        navigate("/");
         
-        result.auth = true
-        result.user =json
       }
 
     } else {
 
       setLoading(false);
-
-      result.auth = false
-
       setError("Por favor, preencha os campos necessários!");
     }
 
-    return result
   }
 
 
@@ -78,7 +70,7 @@ export default function Login() {
 
         <FormContent>
 
-          <form onSubmit={(e) => context.logIn(Login(e))}>
+          <form onSubmit={(e) => Login(e)}>
 
             {error &&
 

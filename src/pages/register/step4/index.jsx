@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Context } from '../../../contexts/context';
 import FormArea from "../../../components/formArea";
 import Header from "../../../components/header";
 import Content from "../../../components/content";
 import SideBar from "../../../components/sidebar";
 import FormContent from "../../../components/formContent";
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Alert } from '../../../assets/index';
 import { api } from '../../../services/api.js';
@@ -14,6 +14,7 @@ import Load from '../../../assets/loadingform.gif';
 export default function StepFourth() {
 
   const navigate = useNavigate();
+  const { state } = useContext(Context);
 
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -21,11 +22,11 @@ export default function StepFourth() {
   const [loading, setLoading] = useState(false);
 
   const user = {
-    name: useSelector(state => state.UserInfoReducer.name),
-    email: useSelector(state => state.UserInfoReducer.email),
+    name: state.user.name,
+    email: state.user.email,
     password,
-    experience: useSelector(state => state.UserInfoReducer.experience),
-    phone: useSelector(state => state.UserInfoReducer.phone)
+    experience: state.user.experience,
+    phone: state.user.phone
   }
 
   async function AddUser(e) {
@@ -51,7 +52,6 @@ export default function StepFourth() {
         if (json.error) {
 
           setLoading(false);
-
           setError(json.error);
 
         } else {
@@ -72,8 +72,6 @@ export default function StepFourth() {
 
       setError("Por favor, preencha os campos necessários!");
     }
-
-
 
   }
 

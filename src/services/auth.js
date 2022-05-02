@@ -2,29 +2,44 @@ import Cookies from 'js-cookie';
 
 export function DoLogin(json) {
 
-    Cookies.set('token', json.token, { expires: 1 });
-    Cookies.set('id', json.id, { expires: 1 });
-    Cookies.set('name', json.name, { expires: 1 });
-    Cookies.set('email', json.email, { expires: 1 });
-    Cookies.set('experience', json.experience, { expires: 1 });
-    Cookies.set('phone', json.phone, { expires: 1 });
+    let expire = new Date(new Date().getTime() + 1 * 60 * 1000);
+
+    Cookies.set('token', json.token, { expires: expire });
+    Cookies.set('id', json.id, { expires: expire });
+
+    if (json.refreshToken) {
+        Cookies.set('refreshToken', json.refreshToken, { expires: 15 });
+    } 
 
 }
 
 export function DoLogout() {
     
     Cookies.remove('token');
+    Cookies.remove('refreshToken');
     Cookies.remove('id');
-    Cookies.remove('name');
-    Cookies.remove('email');
-    Cookies.remove('experience');
-    Cookies.remove('phone');
 }
 
 export function isLogged() {
+
     if (Cookies.get('token')) {
         return true;
     } else {
         return false;
+    }
+}
+
+export function refreshTokenIsValid() {
+
+    if (isLogged() === false) {
+
+        if (Cookies.get('refreshToken')) {
+
+            return { status: true, refreshToken: Cookies.get('refreshToken') };
+
+        } else {
+
+            return { status: false };
+        }
     }
 }
