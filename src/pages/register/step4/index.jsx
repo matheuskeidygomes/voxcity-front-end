@@ -5,7 +5,7 @@ import Header from "../../../components/header";
 import Content from "../../../components/content";
 import SideBar from "../../../components/sidebar";
 import FormContent from "../../../components/formContent";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import { Alert } from '../../../assets/index';
 import { api } from '../../../services/api.js';
 import { DoLogin } from '../../../services/auth.js';
@@ -49,7 +49,7 @@ export default function StepFourth() {
 
         let json = await res.json();
 
-        if (json.error) {
+        if (json.error) { 
 
           setLoading(false);
           setError(json.error);
@@ -57,6 +57,7 @@ export default function StepFourth() {
         } else {
 
           DoLogin(json);
+          
           navigate("/");
         }
 
@@ -68,7 +69,6 @@ export default function StepFourth() {
     } else {
 
       setLoading(false);
-
       setError("Por favor, preencha os campos necessários!");
     }
 
